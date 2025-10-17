@@ -1,1 +1,0 @@
-# Ethernaut-audit-journey
