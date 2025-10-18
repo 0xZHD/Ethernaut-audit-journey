@@ -5,7 +5,7 @@ Hello! In this repository, I've solved the **Fallback** level as part of my Ethe
 
 **Goal:** Become the owner of the contract and withdraw all the Ether from it.  
 **Tools:** Foundry (for scripting and testing), Sepolia testnet.  
-**Solved Date:** October 19, 2025 (Day 3).  
+**Solved Date:** October 15, 2025 (Day 2).  
 **Success:** Verified on the Ethernaut site!
 
 ## Contract Overview
