@@ -40,13 +40,15 @@ Each level's README includes:
 - **Code Snippets:** Target and attack contracts.
 
 ## Featured Levels (So Far)
-| Level                                      | Date Solved | Key Vulnerability            | Quick Insight                                         |
-|--------------------------------------------|-------------|------------------------------|-------------------------------------------------------|
-| [Level0 (Hello Ethernaut)](levels/level0/) | Oct 14      | Exposed Public Password      | Public vars auto-generate getters—scan for secrets!   |
-| [Fallback](levels/fallback/)               | Oct 15      | Unprotected Receive Fallback | Fallbacks bypass limits; use CEI pattern.             |
-| [Fallout](levels/fallout/)                 | Oct 16      | Public "Constructor" Typo    | Verify function names—typos expose ownership!         |
-| [CoinFlip](levels/coinflip/)               | Oct 17      | Predictable Randomness       | Blockhash is miner-manipulable; prefer Chainlink VRF. |
-
+| Level                                      | Date Solved | Key Vulnerability                  | Quick Insight                                         |
+|--------------------------------------------|-------------|------------------------------------|-------------------------------------------------------|
+| [Level0 (Hello Ethernaut)](levels/level0/) | Oct 14      | Exposed Public Password            | Public vars auto-generate getters—scan for secrets!   |
+| [Fallback](levels/fallback/)               | Oct 15      | Unprotected Receive Fallback       | Fallbacks bypass limits; use CEI pattern.             |
+| [Fallout](levels/fallout/)                 | Oct 16      | Public "Constructor" Typo          | Verify function names—typos expose ownership!         |
+| [CoinFlip](levels/coinflip/)               | Oct 17      | Predictable Randomness             | Blockhash is miner-manipulable; prefer Chainlink VRF. |
+| [Telephone](levels/telephone/)             | Oct 18      | tx.origin vs. msg.sender Confusion | tx.origin misuse allows contract calls to bypass EOA-only checks; always use msg.sender for auth! |
+| [Token](levels/token/)                     | Oct 19      | Integer Underflow (Unchecked Arithmetic) | Underflow in transfer leads to infinite tokens (2^256 wrap-around); use SafeMath or ^0.8.0+ checks. |
+| [Delegation](levels/delegation/)            | Oct 20      | Unsafe Delegatecall (Storage Collision) | Delegatecall runs code in caller's storage—pwn() calldata changes proxy owner. Avoid unless layouts match! |
 ## Getting Started
 ### Prerequisites
 - **Foundry:** Install via `curl -L https://foundry.paradigm.xyz | bash` then `foundryup`.
@@ -97,5 +99,5 @@ Let's audit the blockchain together! 💻🔒
 - [Foundry Book](https://book.getfoundry.sh/)  
 - [Solidity Docs](https://docs.soliditylang.org/)
 
-*Last Updated: October 17, 2025*  
+*Last Updated: October 20, 2025*  
 *Stars and forks appreciated! ⭐*
